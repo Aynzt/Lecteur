@@ -15,15 +15,6 @@ public class Uno {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		try {
-			Uno window = new Uno();
-			window.frmHaudio.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-			
-	}
 
 	/**
 	 * Create the application.
