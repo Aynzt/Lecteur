@@ -28,6 +28,8 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
+import javax.swing.ImageIcon;
+import java.awt.Font;
 
 public class OpenFile extends JDialog {
 	private JTextField textField;
@@ -114,6 +116,10 @@ public class OpenFile extends JDialog {
 		textField.setColumns(10);
 		
 		JButton btnEjecter = new JButton("Ouvrir");
+		
+		JButton btnNewButton_3 = new JButton("");
+		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnNewButton_3.setIcon(new ImageIcon("H:\\Package D'icones\\24x24\\eject.png"));
 		GroupLayout gl_panel_4 = new GroupLayout(panel_4);
 		gl_panel_4.setHorizontalGroup(
 			gl_panel_4.createParallelGroup(Alignment.LEADING)
@@ -127,15 +133,17 @@ public class OpenFile extends JDialog {
 							.addGap(18)
 							.addComponent(rdbtnBluray)
 							.addGap(18)
-							.addComponent(rdbtnSvcdcd))
+							.addComponent(rdbtnSvcdcd)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnEjecter))
 						.addComponent(chckbxPasDeMenu)
 						.addGroup(gl_panel_4.createSequentialGroup()
 							.addComponent(lblPriphriqueDuDisque)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 163, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(btnEjecter)))
-					.addContainerGap(14, Short.MAX_VALUE))
+							.addComponent(btnNewButton_3, GroupLayout.PREFERRED_SIZE, 46, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap(42, Short.MAX_VALUE))
 		);
 		gl_panel_4.setVerticalGroup(
 			gl_panel_4.createParallelGroup(Alignment.LEADING)
@@ -144,14 +152,17 @@ public class OpenFile extends JDialog {
 						.addComponent(rdbtnDvd)
 						.addComponent(rdbtnCdrom)
 						.addComponent(rdbtnBluray)
-						.addComponent(rdbtnSvcdcd))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(chckbxPasDeMenu)
-					.addPreferredGap(ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-					.addGroup(gl_panel_4.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblPriphriqueDuDisque)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(rdbtnSvcdcd)
 						.addComponent(btnEjecter))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_panel_4.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_panel_4.createSequentialGroup()
+							.addComponent(chckbxPasDeMenu)
+							.addPreferredGap(ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+							.addGroup(gl_panel_4.createParallelGroup(Alignment.BASELINE)
+								.addComponent(lblPriphriqueDuDisque)
+								.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+						.addComponent(btnNewButton_3))
 					.addContainerGap())
 		);
 		panel_4.setLayout(gl_panel_4);
