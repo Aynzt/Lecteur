@@ -3,12 +3,14 @@ package view;
 import java.awt.EventQueue;
 
 import javax.swing.JDialog;
-import javax.swing.JDesktopPane;
+import javax.swing.JFileChooser;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JPanel;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class OpenFile extends JDialog {
-
 	/**
 	 * Launch the application.
 	 */
