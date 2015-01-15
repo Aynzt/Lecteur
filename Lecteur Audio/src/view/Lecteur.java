@@ -11,8 +11,10 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
 import javax.swing.KeyStroke;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.InputEvent;
+
 import javax.swing.JProgressBar;
 import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
@@ -21,6 +23,8 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import javax.swing.JSlider;
+
+import controller.Ctrl_Lecteur;
 
 public class Lecteur extends JFrame {
 
@@ -62,6 +66,7 @@ public class Lecteur extends JFrame {
 	private JMenu aide;
 	private JMenuItem aide_f;
 	private JMenuItem a_propos;
+	private Ctrl_Lecteur ctrl_lect;
 	
 
 	/**
@@ -287,5 +292,37 @@ public class Lecteur extends JFrame {
 					.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE))
 		);
 		contentPane.setLayout(gl_contentPane);
+		ctrl_lect = new Ctrl_Lecteur(this);
+		btnPlay.addActionListener(ctrl_lect);
+		btnPrec.addActionListener(ctrl_lect);
+		ouv_med.addActionListener(ctrl_lect);
+		panel_pochet.addMouseListener(ctrl_lect);
+		btnStop.addActionListener(ctrl_lect);
+		btnSuiv.addActionListener(ctrl_lect);
+		btnRep.addActionListener(ctrl_lect);
+		btnAlea.addActionListener(ctrl_lect);
+		btnListe.addActionListener(ctrl_lect);
+		slider.addMouseListener(ctrl_lect);
+		minut_fin.addMouseListener(ctrl_lect);
+		minut_debut.addMouseListener(ctrl_lect);
+		progressBar.addMouseListener(ctrl_lect);
+		ouv_dos.addActionListener(ctrl_lect);
+		ouv_dis.addActionListener(ctrl_lect);
+		enr_list.addActionListener(ctrl_lect);
+		mnMdiaRcents.addActionListener(ctrl_lect);
+		quitter.addActionListener(ctrl_lect);
+		jouer.addActionListener(ctrl_lect);
+		stop.addActionListener(ctrl_lect);
+		prec.addActionListener(ctrl_lect);
+		suiv.addActionListener(ctrl_lect);
+		aug_ton.addActionListener(ctrl_lect);
+		red_ton.addActionListener(ctrl_lect);
+		coup_son.addActionListener(ctrl_lect);
+		list_lect.addActionListener(ctrl_lect);
+		interf_min.addActionListener(ctrl_lect);
+		plein_ecran.addActionListener(ctrl_lect);
+		aide_f.addActionListener(ctrl_lect);
+		a_propos.addActionListener(ctrl_lect);
+		
 	}
 }
