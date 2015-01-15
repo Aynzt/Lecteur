@@ -38,6 +38,7 @@ public class Appli_Lecteur extends JFrame {
 	 * Create the frame.
 	 */
 	public Appli_Lecteur() {
+		setTitle("Mini Lecteur");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 815, 430);
 		

@@ -11,6 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class OpenFile extends JDialog {
+	JFileChooser chooser = new JFileChooser();
+	FileNameExtensionFilter filtre = new FileNameExtensionFilter("Fichier MP3", "mp3", "wmv", "wav");
+	fc.setFilte
 	/**
 	 * Launch the application.
 	 */
